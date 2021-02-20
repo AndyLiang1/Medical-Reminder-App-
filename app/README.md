@@ -1,1 +1,0 @@
-This is a project for Stormhacks 2021.
