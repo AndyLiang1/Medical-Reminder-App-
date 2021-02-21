@@ -9,13 +9,21 @@
     android:orientation="vertical">
 
     <TextView
+        android:id="@+id/upcomingLabel"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.15"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:textSize="28sp"
+        android:text="Next Medication Reminder:" />
+
+    <TextView
         android:id="@+id/upcomingReminder"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginLeft="50dp"
-        android:layout_marginTop="50dp"
         android:layout_marginRight="50dp"
-        android:layout_marginBottom="100dp"
         android:layout_weight="1"
         android:background="@color/purple_200"
         android:gravity="center|center_vertical"
@@ -25,6 +33,7 @@
         android:paddingEnd="1dp"
         android:paddingBottom="1dp"
         android:text="@string/upcomingReminder"
+        android:textColor="#FFFFFF"
         android:textSize="36sp"
         android:translationY="25dp" />
 
