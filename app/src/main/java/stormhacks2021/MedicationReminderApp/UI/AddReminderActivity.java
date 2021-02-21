@@ -85,6 +85,13 @@ public class AddReminderActivity extends AppCompatActivity {
                 int month = calendar.get(Calendar.MONTH);
                 int dayOfMonth = calendar.get(Calendar.DAY_OF_MONTH);
 
+                Calendar today = Calendar.getInstance();
+                int todayYear = today.get(Calendar.YEAR);
+                int todayMonth = today.get(Calendar.MONTH);
+                int todayDay = today.get(Calendar.DAY_OF_MONTH);
+
+                System.out.println(Integer.toString(todayYear) + " " + Integer.toString(todayMonth) + " " + Integer.toString(todayDay));
+
                 DatePickerDialog.OnDateSetListener listener = new DatePickerDialog.OnDateSetListener() {
                     @Override
                     public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
@@ -93,6 +100,7 @@ public class AddReminderActivity extends AppCompatActivity {
                         calendar.set(Calendar.MONTH, month);
                         calendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
                         String currentDate = DateFormat.getDateInstance(DateFormat.MONTH_FIELD).format(calendar.getTime());
+
                         startDateInput.setText(currentDate);
                         startDate = new MedicationDate(dayOfMonth, month, year);
                     }

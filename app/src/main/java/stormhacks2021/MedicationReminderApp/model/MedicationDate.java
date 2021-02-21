@@ -18,7 +18,7 @@ public class MedicationDate {
     }
 
     public String displayDate() {
-        return String.format("%02d", medicationDay) + " - " + String.format("%02d", medicationMonth) +
+        return String.format("%02d", medicationMonth) + " - " + String.format("%02d", medicationDay) +
                 " - " + String.format("%02d", medicationYear);
     }
 }
