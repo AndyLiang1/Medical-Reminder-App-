@@ -3,4 +3,14 @@
     <string name="insertReminderButton">Add New Reminder</string>
     <string name="upcomingReminder">TextView</string>
     <string name="reminder_fragment">Reminder Fragment</string>
+    <string name="set_time_here">Click to Set Time</string>
+    <string name="medicine">Medicine</string>
+    <string name="your_time_displays_here">Your time displays here:</string>
+    <string name="date">Date</string>
+    <string name="medicine_name">Medicine Name</string>
+    <string name="dateFormat">ddmmyyyy</string>
+    <string name="putInDate">putInDate</string>
+    <string name="saveButton">Save Reminder</string>
+    <string name="cancelButton">Cancel Insertion</string>
+    <string name="newline">\n</string>
 </resources>
