@@ -18,7 +18,7 @@ import java.util.Calendar;
 import java.util.TimeZone;
 
 public class MainActivity extends AppCompatActivity {
-    private TextView timeTV;
+    //private TextView timeTV;
     private Button pickTime;
     private AlarmManager alarmMgr;
 
@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        timeTV = (TextView) findViewById(R.id.timeTV);
+        //timeTV = (TextView) findViewById(R.id.timeTV);
         pickTime = (Button) findViewById((R.id.timeBtn));
 
         pickTime.setOnClickListener(new View.OnClickListener() {
@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
                         c.setTimeZone(TimeZone.getDefault());
                         SimpleDateFormat format = new SimpleDateFormat("k:mm a");
                         String time = format.format(c.getTime());
-                        timeTV.setText(time);
+                        //timeTV.setText(time);
 
 
                         long milliSec = c.get(Calendar.MILLISECOND);
@@ -55,7 +55,6 @@ public class MainActivity extends AppCompatActivity {
                         alarmMgr = (AlarmManager)MainActivity.this.getSystemService(Context.ALARM_SERVICE);
                         Intent intent = new Intent(MainActivity.this, AlertReceiver.class);
                         alarmIntent = PendingIntent.getBroadcast(MainActivity.this, 0, intent, 0);
-                        // replace with c.getTimeInMillis()
                         alarmMgr.setRepeating(AlarmManager.RTC_WAKEUP, c.getTimeInMillis(),
                                 120*1000, alarmIntent);
                     }
@@ -65,9 +64,5 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
-//
-
-
     }
 }
