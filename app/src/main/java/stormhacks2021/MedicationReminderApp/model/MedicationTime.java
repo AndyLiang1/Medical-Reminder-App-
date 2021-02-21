@@ -15,6 +15,6 @@ public class MedicationTime {
     }
 
     public String displayTime() {
-        return medicationHour + ":" + medicationMinute;
+        return String.format("%02d", medicationHour) + ":" + String.format("%02d", medicationMinute);
     }
 }

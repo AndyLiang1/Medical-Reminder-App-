@@ -37,12 +37,12 @@ public class DefaultStarterActivity extends AppCompatActivity {
 
                 switch (item.getItemId()) {
                     case (R.id.bottom_navigation_homepage):
-                        selectedFragment = new HomeFragment();
+                        selectedFragment = HomeFragment.startHomeFragment();
                         getSupportActionBar().setTitle("Home");
                         break;
 
                     case (R.id.bottom_navigation_reminder):
-                        selectedFragment = new ReminderFragment();
+                        selectedFragment = ReminderFragment.startReminderFragment();
                         getSupportActionBar().setTitle("Reminders List");
                         break;
                 }

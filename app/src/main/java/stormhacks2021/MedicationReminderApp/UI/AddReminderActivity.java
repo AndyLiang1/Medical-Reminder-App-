@@ -1,6 +1,5 @@
 package stormhacks2021.MedicationReminderApp.UI;
 
-import android.app.Activity;
 import android.app.AlarmManager;
 import android.app.DatePickerDialog;
 import android.app.PendingIntent;
@@ -12,17 +11,14 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.DialogFragment;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -77,8 +73,6 @@ public class AddReminderActivity extends AppCompatActivity {
 
             }
         });
-//        medicationName = medName.getText().toString();
-//        Log.d("DEBUG", medicationName);
     }
 
     private void setupMedicationStartDate() {
@@ -193,7 +187,6 @@ public class AddReminderActivity extends AppCompatActivity {
                 MedicationReminder newReminder = new MedicationReminder(medicationName, startDate,
                         endDate, medicationTime);
                 remindersManager.addReminder(newReminder);
-                Log.d("DEBUG", medicationName);
                 finish();
             }
         });
