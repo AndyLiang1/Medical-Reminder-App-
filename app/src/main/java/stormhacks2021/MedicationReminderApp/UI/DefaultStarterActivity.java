@@ -10,6 +10,7 @@ import android.view.MenuItem;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import stormhacks2021.MedicationReminderApp.R;
+import stormhacks2021.MedicationReminderApp.model.TestData;
 
 public class DefaultStarterActivity extends AppCompatActivity {
 
@@ -18,6 +19,8 @@ public class DefaultStarterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_default_starter_screen);
         setupNavigationBar();
+
+        TestData.makeUpReminders();
     }
 
     private void setupNavigationBar() {

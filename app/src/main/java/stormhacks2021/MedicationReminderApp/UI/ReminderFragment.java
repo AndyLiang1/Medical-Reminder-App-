@@ -9,8 +9,12 @@ import android.widget.Button;
 import androidx.fragment.app.Fragment;
 
 import stormhacks2021.MedicationReminderApp.R;
+import stormhacks2021.MedicationReminderApp.model.MedicationRemindersManager;
 
 public class ReminderFragment extends Fragment {
+
+    private MedicationRemindersManager remindersManager = MedicationRemindersManager.getInstance();
+
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_reminder, container, false);

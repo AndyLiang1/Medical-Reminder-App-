@@ -3,17 +3,17 @@ package stormhacks2021.MedicationReminderApp.model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MedicationReminderManager {
+public class MedicationRemindersManager {
     private List<MedicationReminder> remindersList = new ArrayList<>();
-    private static MedicationReminderManager instance;
+    private static MedicationRemindersManager instance;
 
-    private MedicationReminderManager() {
+    private MedicationRemindersManager() {
         // private and do nothing to ensure this is a singleton
     }
 
-    public static MedicationReminderManager getInstance() {
+    public static MedicationRemindersManager getInstance() {
         if (instance == null) {
-            instance = new MedicationReminderManager();
+            instance = new MedicationRemindersManager();
         }
         return instance;
     }
