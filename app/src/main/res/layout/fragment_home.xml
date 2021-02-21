@@ -2,25 +2,11 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_weight="1"
     android:orientation="vertical">
-
-    <Button
-        android:id="@+id/insertReminderButton"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginRight="50dp"
-        android:layout_marginBottom="50dp"
-        android:layout_weight="1"
-        android:text="@string/insertReminderButton"
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textSize="30sp"
-        app:cornerRadius="24dp"
-        tools:text="Add New Reminder" />
 
     <TextView
         android:id="@+id/upcomingReminder"
@@ -38,6 +24,29 @@
         android:paddingTop="1dp"
         android:paddingEnd="1dp"
         android:paddingBottom="1dp"
-        android:text="@string/upcomingReminder" />
+        android:text="@string/upcomingReminder"
+        android:translationY="25dp" />
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/insertReminderButton"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="50dp"
+        android:text="@string/insertReminderButton"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:cornerRadius="24dp"
+        tools:text="Add New Reminder" />
 
 </LinearLayout>
