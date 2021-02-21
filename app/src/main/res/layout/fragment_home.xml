@@ -25,6 +25,7 @@
         android:paddingEnd="1dp"
         android:paddingBottom="1dp"
         android:text="@string/upcomingReminder"
+        android:textSize="36sp"
         android:translationY="25dp" />
 
     <Button

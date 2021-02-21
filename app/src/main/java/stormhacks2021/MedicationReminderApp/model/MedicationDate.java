@@ -21,4 +21,14 @@ public class MedicationDate {
         return String.format("%02d", medicationDay) + " - " + String.format("%02d", medicationMonth) +
                 " - " + String.format("%02d", medicationYear);
     }
+
+    public int[] getInfo(){
+        int[] array = new int[3];
+        array[0] = this.medicationYear;
+        array[1] = this.medicationMonth;
+        array[2] = this.medicationDay;
+        return array;
+    }
+
+
 }
