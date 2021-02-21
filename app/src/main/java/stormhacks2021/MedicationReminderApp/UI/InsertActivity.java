@@ -1,6 +1,4 @@
-package stormhacks2021.MedicationReminderApp;
-
-import androidx.appcompat.app.AppCompatActivity;
+package stormhacks2021.MedicationReminderApp.UI;
 
 import android.app.Activity;
 import android.app.AlarmManager;
@@ -10,17 +8,17 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
-import java.sql.Time;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.TimeZone;
+
+import stormhacks2021.MedicationReminderApp.R;
 
 public class InsertActivity extends Activity {
     private TextView timeTV;

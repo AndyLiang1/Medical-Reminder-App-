@@ -17,10 +17,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".InsertActivity">
+        <activity android:name=".UI.InsertActivity">
 
         </activity>
-        <receiver android:name = ".AlertReceiver"/>
+        <receiver android:name = ".UI.AlertReceiver"/>
     </application>
 
 </manifest>

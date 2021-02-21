@@ -33,14 +33,6 @@ public class ReminderFragment extends Fragment {
         remindersRecyclerView.setLayoutManager(recyclerViewLayoutManager);
         recyclerViewAdapter = new ReminderAdapter(reminders);
         remindersRecyclerView.setAdapter(recyclerViewAdapter);
-//        Button reminderButton = (Button) view.findViewById(R.id.reminder_button);
-//        reminderButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent testIntent = new Intent(getActivity(), TestActivity.class);
-//                startActivity(testIntent);
-//            }
-//        });
         return view;
     }
 }

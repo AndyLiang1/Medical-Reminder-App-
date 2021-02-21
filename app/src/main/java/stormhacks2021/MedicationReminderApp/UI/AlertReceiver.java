@@ -1,4 +1,4 @@
-package stormhacks2021.MedicationReminderApp;
+package stormhacks2021.MedicationReminderApp.UI;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
