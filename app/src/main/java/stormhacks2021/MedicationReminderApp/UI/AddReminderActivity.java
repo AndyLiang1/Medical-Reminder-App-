@@ -2,13 +2,20 @@ package stormhacks2021.MedicationReminderApp.UI;
 
 import android.app.Activity;
 import android.app.AlarmManager;
+import android.app.DatePickerDialog;
 import android.app.PendingIntent;
 import android.app.TimePickerDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -54,7 +61,24 @@ public class AddReminderActivity extends AppCompatActivity {
 
     private void setupMedicationNameInput() {
         EditText medName = (EditText) findViewById(R.id.medicationNameInput);
-        medicationName = medName.getText().toString();
+        medName.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                medicationName = medName.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+//        medicationName = medName.getText().toString();
+//        Log.d("DEBUG", medicationName);
     }
 
     private void setupMedicationStartDate() {
@@ -62,12 +86,27 @@ public class AddReminderActivity extends AppCompatActivity {
         startDateInput.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                DialogFragment datePicker = new StartDatePickerFragment();
-                datePicker.show(getSupportFragmentManager(), "date picker");
                 Calendar calendar = Calendar.getInstance();
-                MedicationDate date = new MedicationDate(calendar.get(Calendar.DAY_OF_MONTH),
-                        Calendar.MONTH, Calendar.YEAR);
-                startDate = date;
+                int year = calendar.get(Calendar.YEAR);
+                int month = calendar.get(Calendar.MONTH);
+                int dayOfMonth = calendar.get(Calendar.DAY_OF_MONTH);
+
+                DatePickerDialog.OnDateSetListener listener = new DatePickerDialog.OnDateSetListener() {
+                    @Override
+                    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                        Calendar calendar = Calendar.getInstance();
+                        calendar.set(Calendar.YEAR, year);
+                        calendar.set(Calendar.MONTH, month);
+                        calendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+                        String currentDate = DateFormat.getDateInstance(DateFormat.MONTH_FIELD).format(calendar.getTime());
+                        startDateInput.setText(currentDate);
+                        startDate = new MedicationDate(dayOfMonth, month, year);
+                    }
+                };
+                DatePickerDialog dialog = new DatePickerDialog(AddReminderActivity.this,
+                        android.R.style.Theme_Material_Light_Dialog, listener, year, month, dayOfMonth);
+                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+                dialog.show();
             }
         });
     }
@@ -77,12 +116,27 @@ public class AddReminderActivity extends AppCompatActivity {
         endDateInput.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                DialogFragment datePicker = new EndDatePickerFragment();
-                datePicker.show(getSupportFragmentManager(), "date picker");
                 Calendar calendar = Calendar.getInstance();
-                MedicationDate date = new MedicationDate(calendar.get(Calendar.DAY_OF_MONTH),
-                        calendar.get(Calendar.MONTH), calendar.get(Calendar.YEAR));
-                endDate = date;
+                int year = calendar.get(Calendar.YEAR);
+                int month = calendar.get(Calendar.MONTH);
+                int dayOfMonth = calendar.get(Calendar.DAY_OF_MONTH);
+
+                DatePickerDialog.OnDateSetListener listener = new DatePickerDialog.OnDateSetListener() {
+                    @Override
+                    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                        Calendar calendar = Calendar.getInstance();
+                        calendar.set(Calendar.YEAR, year);
+                        calendar.set(Calendar.MONTH, month);
+                        calendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+                        String currentDate = DateFormat.getDateInstance(DateFormat.MONTH_FIELD).format(calendar.getTime());
+                        endDateInput.setText(currentDate);
+                        endDate = new MedicationDate(dayOfMonth, month, year);
+                    }
+                };
+                DatePickerDialog dialog = new DatePickerDialog(AddReminderActivity.this,
+                        android.R.style.Theme_Material_Light_Dialog, listener, year, month, dayOfMonth);
+                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+                dialog.show();
             }
         });
     }
@@ -139,6 +193,7 @@ public class AddReminderActivity extends AppCompatActivity {
                 MedicationReminder newReminder = new MedicationReminder(medicationName, startDate,
                         endDate, medicationTime);
                 remindersManager.addReminder(newReminder);
+                Log.d("DEBUG", medicationName);
                 finish();
             }
         });

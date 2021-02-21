@@ -3,7 +3,6 @@ package stormhacks2021.MedicationReminderApp.UI.util;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import stormhacks2021.MedicationReminderApp.R;
@@ -22,15 +21,15 @@ public class ReminderAdapter extends RecyclerView.Adapter<ReminderAdapter.Remind
     }
 
     public class RemindersViewHolder extends RecyclerView.ViewHolder {
-        public ImageView imageView;
         public TextView textView1;
         public TextView textView2;
+        public TextView textView3;
 
         public RemindersViewHolder(@NonNull View itemView) {
             super(itemView);
-            imageView = itemView.findViewById(R.id.imageView);
-            textView1 = itemView.findViewById(R.id.fistTextView);
+            textView1 = itemView.findViewById(R.id.firstTextView);
             textView2 = itemView.findViewById(R.id.secondTextView);
+            textView3 = itemView.findViewById(R.id.thirdTextView);
         }
 
     }
@@ -50,6 +49,7 @@ public class ReminderAdapter extends RecyclerView.Adapter<ReminderAdapter.Remind
         holder.textView1.setText(currentReminder.displayMedicationName());
         holder.textView2.setText(currentReminder.displayMedicationDateStart() + " to " +
                 currentReminder.displayMedicationDateEnd());
+        holder.textView3.setText(currentReminder.displayMedicationTime());
     }
 
     @Override
