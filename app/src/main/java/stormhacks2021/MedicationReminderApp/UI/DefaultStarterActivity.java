@@ -1,4 +1,4 @@
-package stormhacks2021.MedicationReminderApp;
+package stormhacks2021.MedicationReminderApp.UI;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,6 +10,9 @@ import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import stormhacks2021.MedicationReminderApp.R;
+import stormhacks2021.MedicationReminderApp.model.TestData;
+
 public class DefaultStarterActivity extends AppCompatActivity {
 
     @Override
@@ -18,6 +21,8 @@ public class DefaultStarterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_default_starter_screen);
         getSupportActionBar().setTitle("Home");
         setupNavigationBar();
+
+        TestData.makeUpReminders();
     }
 
     /**

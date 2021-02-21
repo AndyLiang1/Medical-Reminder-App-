@@ -40,7 +40,6 @@
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="30sp"
-        android:translationY="-75dp"
         app:cornerRadius="24dp"
         tools:text="Add New Reminder" />
 
