@@ -102,7 +102,7 @@ public class AddReminderActivity extends AppCompatActivity {
                         String currentDate = DateFormat.getDateInstance(DateFormat.MONTH_FIELD).format(calendar.getTime());
 
                         startDateInput.setText(currentDate);
-                        startDate = new MedicationDate(dayOfMonth, month, year);
+                        startDate = new MedicationDate(dayOfMonth, month+1, year);
                     }
                 };
                 DatePickerDialog dialog = new DatePickerDialog(AddReminderActivity.this,
@@ -132,7 +132,7 @@ public class AddReminderActivity extends AppCompatActivity {
                         calendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
                         String currentDate = DateFormat.getDateInstance(DateFormat.MONTH_FIELD).format(calendar.getTime());
                         endDateInput.setText(currentDate);
-                        endDate = new MedicationDate(dayOfMonth, month, year);
+                        endDate = new MedicationDate(dayOfMonth, month+1, year);
                     }
                 };
                 DatePickerDialog dialog = new DatePickerDialog(AddReminderActivity.this,
@@ -209,25 +209,4 @@ public class AddReminderActivity extends AppCompatActivity {
             }
         });
     }
-
-//    private void createButtonReminder(String time) {
-//        String newLine = getString(R.string.newline);
-//
-//        //creates a new button and sets the medication name, date, and time, each on a different line
-//        Button newButton = new Button(this);
-////        String buttonText = medicationName + newLine + setDate + newLine + time;
-////        newButton.setText(buttonText);
-//
-//        newButton.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
-//                LinearLayout.LayoutParams.WRAP_CONTENT));
-//
-//        LinearLayout layout = new LinearLayout(this); //trying to add button to the Reminder Layout
-//        layout.addView(newButton);
-//
-////        Intent insertIntent = new Intent(InsertActivity.this, HomeFragment.class);
-////        startActivity(insertIntent);
-//        finish();
-//    }
-
-
 }

@@ -15,7 +15,9 @@
         android:layout_weight="0.15"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
+        android:layout_marginTop="30dp"
         android:textSize="28sp"
+        android:gravity="center_horizontal"
         android:text="Next Medication Reminder:" />
 
     <TextView
@@ -42,9 +44,9 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginLeft="50dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="30dp"
         android:layout_marginRight="50dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="30dp"
         android:layout_weight="1"
         android:text="@string/insertReminderButton"
         android:textAlignment="center"
