@@ -47,7 +47,7 @@ public class ReminderAdapter extends RecyclerView.Adapter<ReminderAdapter.Remind
         MedicationReminder currentReminder = reminders.get(position);
 
         holder.textView1.setText(currentReminder.displayMedicationName());
-        holder.textView2.setText(currentReminder.displayMedicationDateStart() + " to " +
+        holder.textView2.setText(currentReminder.displayMedicationDateStart() + " to\n" +
                 currentReminder.displayMedicationDateEnd());
         holder.textView3.setText(currentReminder.displayMedicationTime());
     }

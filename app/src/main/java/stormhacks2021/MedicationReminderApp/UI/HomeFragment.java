@@ -15,6 +15,14 @@ import android.widget.Toast;
 import androidx.fragment.app.Fragment;
 
 public class HomeFragment extends Fragment {
+    private static HomeFragment homeFragment;
+
+    public static HomeFragment startHomeFragment() {
+        if (homeFragment == null) {
+            homeFragment = new HomeFragment();
+        }
+        return homeFragment;
+    }
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         Activity activity = getActivity();
