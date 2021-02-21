@@ -1,4 +1,4 @@
-package stormhacks2021.MedicationReminderApp;
+package stormhacks2021.MedicationReminderApp.UI;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+import stormhacks2021.MedicationReminderApp.R;
 
 public class DefaultStarterActivity extends AppCompatActivity {
 
