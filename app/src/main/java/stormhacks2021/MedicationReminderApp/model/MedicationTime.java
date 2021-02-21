@@ -13,4 +13,8 @@ public class MedicationTime {
         medicationHour = hour;
         medicationMinute = minute;
     }
+
+    public String displayTime() {
+        return medicationHour + ":" + medicationMinute;
+    }
 }
