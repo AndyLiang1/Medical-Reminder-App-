@@ -23,7 +23,7 @@ public class HomeFragment extends Fragment {
                 Toast.makeText(getActivity(), "Creating a new reminder...", Toast.LENGTH_SHORT).show();
                 Intent insertIntent = new Intent(getActivity(), InsertActivity.class);
                 activity.startActivity(insertIntent);
-                activity.finish();
+//                activity.finish();
             }
         });
 

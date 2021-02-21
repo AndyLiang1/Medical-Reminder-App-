@@ -113,17 +113,15 @@ public class InsertActivity extends Activity {
         newButton.setText(buttonText);
 
         newButton.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
-                                  LinearLayout.LayoutParams.WRAP_CONTENT));
+                LinearLayout.LayoutParams.WRAP_CONTENT));
 
         LinearLayout layout = new LinearLayout(this); //trying to add button to the Reminder Layout
         layout.addView(newButton);
 
-        Intent insertIntent = new Intent(activity, ReminderFragment.class);
-        activity.startActivity(insertIntent);
-        activity.finish();
+//        Intent insertIntent = new Intent(InsertActivity.this, HomeFragment.class);
+//        startActivity(insertIntent);
+        finish();
     }
-
-
 
 
 }
