@@ -25,7 +25,7 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getActivity(), "Creating a new reminder...", Toast.LENGTH_SHORT).show();
-                Intent insertIntent = new Intent(getActivity(), InsertActivity.class);
+                Intent insertIntent = new Intent(getActivity(), AddReminderActivity.class);
                 activity.startActivity(insertIntent);
 //                activity.finish();
             }
