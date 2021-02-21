@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MedicationReminderApp</string>
+    <string name="insertReminderButton">Add New Reminder</string>
+    <string name="upcomingReminder">TextView</string>
 </resources>
